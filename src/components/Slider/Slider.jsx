@@ -10,6 +10,7 @@ Slider.propTypes = {
 export default function Slider({ steps }) {
   const [sliderValue, setSliderValue] = useState(0);
   const [tempValue, setTempValue] = useState(0);
+  const [showIndicator, setShowIndicator] = useState(false);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -18,7 +19,12 @@ export default function Slider({ steps }) {
 
   const handleMouseUp = () => {
     setSliderValue(tempValue);
+    setShowIndicator(false);
     console.log(tempValue);
+  };
+
+  const handleMouseDown = () => {
+    setShowIndicator(true);
   };
 
   const handleIncrease = () => {
@@ -39,16 +45,20 @@ export default function Slider({ steps }) {
 
   return (
     <>
-      <input
-        type="range"
-        min={-90}
-        max={90}
-        step={1}
-        className="custom-slider"
-        onChange={(e) => handleChange(e)}
-        onMouseUp={handleMouseUp}
-        value={tempValue}
-      ></input>
+      <div className="slider-div">
+        <input
+          type="range"
+          min={-90}
+          max={90}
+          step={1}
+          className="custom-slider"
+          onChange={(e) => handleChange(e)}
+          onMouseUp={handleMouseUp}
+          onMouseDown={handleMouseDown}
+          value={tempValue}
+        ></input>
+        {showIndicator && <div className="slider-indicator">{tempValue}</div>}
+      </div>
       <div className="flex-container">
         <button className="btn" onClick={handleDecrease}>
           <ArrowLeftIcon className="icon" />

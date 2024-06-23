@@ -1,3 +1,20 @@
+.slider-div{
+    display: flex;
+    width: 100%;
+    overflow: visible;
+    margin-left: -2px;
+}
+.custom-slider{
+    min-width: 100%;
+}
+
+.slider-indicator {
+    color: white;
+    max-width: 15%;
+    border-radius: 5px;
+    font-size:x-small;
+}
+
 .flex-container{
     display: flex;
     align-items: center;
@@ -24,3 +41,6 @@
 h3{
     margin: 0;
 }
+
+
+  

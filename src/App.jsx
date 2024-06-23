@@ -12,7 +12,9 @@ function App() {
   return (
     <>
       <div className="step-selector">
-        <label htmlFor="step-select">Select step: </label>
+        <label className="label" htmlFor="step-select">
+          Selecciona la cantidad de avance:{" "}
+        </label>
         <select
           id="step-select"
           value={stepsAmount}
