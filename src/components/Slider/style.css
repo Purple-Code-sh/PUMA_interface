@@ -1,0 +1,26 @@
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 3vw;
+    padding: 0.2vw 0.4vw;
+    border: 1px solid rgb(63, 63, 83);
+}
+
+.btn{
+    background: black;
+    padding: 0px 0.6vw ;
+    height: fit-content;
+    width: fit-content;
+}
+
+.icon{
+    color: white;
+    width: 1vw;
+    font-weight: bold;
+}
+
+h3{
+    margin: 0;
+}
