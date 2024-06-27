@@ -58,8 +58,8 @@ export default function Slider({ steps }) {
       <div className="slider-div">
         <input
           type="range"
-          min={-90}
-          max={90}
+          min={0}
+          max={255}
           step={1}
           className="custom-slider"
           onChange={(e) => handleChange(e)}
